@@ -1,0 +1,20 @@
+SOLUÇÃO DIA 4
+
+let random = Math.floor(Math.random() * (11 - 1) + 1);
+let tentativas = 0
+do {
+    numero = prompt('Escolha um número de 1 a 10')
+    console.log(numero);
+    tentativas++
+    if (numero != random) {
+        alert('Você errou!')
+    }
+
+} while (numero != random && tentativas < 3);
+
+if (numero == random) {
+    alert('Você acertou!')
+}
+else if (tentativas >= 3) {
+    alert('Você perdeu todas as chances.')
+}
