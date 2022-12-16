@@ -1,0 +1,57 @@
+SOLUÇÃO DO DIA 7
+
+let a
+let b
+function soma (a, b) {
+   return Number(a) + Number(b)   
+}
+
+function subtrai (a, b) {
+   return Number(a) - Number(b)
+}
+
+function multiplica (a, b) {
+   return Number(a)* Number(b)
+}
+function divide (a, b) {
+   return Number(a)/ Number(b)
+}
+
+let operação = ['+','-','*','/', 'sair'];
+while (operação != 'sair'){
+    operação = prompt("Que operação você deseja fazer? Digite +, -, * ou /.");
+    while (operação != '+' && operação != '-' && operação != '*' && operação != '/' && operação != 'sair') {
+        alert(`Operação não reconhecida`);
+        operação = prompt("Que operação você deseja fazer? Digite +, -, * ou /.");
+    }
+    if (operação === 'sair'){
+        alert('Até mais!');
+        break;
+    }
+
+    a = prompt(`Digite o primeiro número.`);
+
+    b = prompt(`Digite o segundo número.`);
+
+
+if (operação === '+') {
+    soma ();
+    alert(`O resultado da operação é ${soma(a,b)}`)
+    break;
+}
+else if (operação === '-') {
+    subtrai ();
+    alert(`O resultado da operação é ${subtrai(a,b)}`)
+    break;
+}
+else if (operação === '*') {
+    multiplica ();
+    alert(`O resultado da operação é ${multiplica(a,b)}`)
+    break;
+}
+else if (operação === '/') {
+    divide ();
+    alert(`O resultado da operação é ${divide(a,b)}`)
+    break;
+}
+}
